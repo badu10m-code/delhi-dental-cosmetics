@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staff Login</title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://extendsclass.com; form-action 'self'; base-uri 'none'; object-src 'none'">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+<div class="adminwrap">
+<div id="gate" class="lockbox"><h2>Staff Login</h2><p>Enter the clinic passcode.</p>
+<form id="login"><input type="password" id="code" maxlength="40" autocomplete="off" required><button class="btn" type="submit">Sign in</button><p id="st" class="fmsg"></p></form></div>
+<div id="panel" style="display:none">
+<h1 style="font-size:1.6rem">Appointment Requests</h1>
+<div style="margin:16px 0"><button class="abtn" id="refresh">Refresh</button><button class="abtn gold" id="csv">Download CSV</button><button class="abtn red" id="out" style="float:right">Sign out</button></div>
+<table><thead><tr><th>Date</th><th>Time</th><th>Name</th><th>Phone</th><th>Request</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table>
+<p class="fine">Data syncs from the clinic cloud store. Passcode can be changed by the site owner (see README).</p>
+</div></div>
+<script src="js/store.js?v=1"></script><script src="js/auth.js?v=1"></script><script src="js/admin.js?v=1"></script>
+</body></html>
