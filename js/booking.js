@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded',function(){
   var f=document.getElementById('bookform');if(!f)return;
   var msg=document.getElementById('f-msg'),send=document.getElementById('f-send'),last=0;
   var dt=document.getElementById('f-date');dt.min=new Date().toISOString().slice(0,10);
+  var sel=document.getElementById('f-time');
+  document.querySelectorAll('#quickslots button').forEach(function(ch){ch.addEventListener('click',function(){
+    sel.value=ch.dataset.slot;document.querySelectorAll('#quickslots button').forEach(function(x){x.classList.remove('on');});ch.classList.add('on');});});
   f.addEventListener('submit',function(e){e.preventDefault();msg.className='fmsg';
     if(f.querySelector('#f-hp').value){msg.textContent='Something went wrong, please retry.';msg.classList.add('bad');return;}
     var name=f.querySelector('#f-name').value.trim(),ph=f.querySelector('#f-phone').value.replace(/[^0-9+ ]/g,'').trim();

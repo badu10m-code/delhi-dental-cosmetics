@@ -1,5 +1,13 @@
 // main.js: nav, reveal, counters, typewriter, year
 document.addEventListener('DOMContentLoaded',function(){
+  try{var cfg=(binLoad()||{}).settings||{};
+    if(cfg.phone){document.querySelectorAll('[data-cfg="phone"]').forEach(function(e){e.textContent=cfg.phone;});
+      document.querySelectorAll('[data-cfg="tel"]').forEach(function(e){e.href='tel:'+cfg.phone.replace(/[^0-9+]/g,'');});}
+    if(cfg.whatsapp){var w=cfg.whatsapp.replace(/[^0-9]/g,'');document.querySelectorAll('[data-cfg="wal"]').forEach(function(e){e.href='https://wa.me/'+w;});}
+    if(cfg.hours){document.querySelectorAll('[data-cfg="hours"]').forEach(function(e){e.textContent=cfg.hours;});
+      document.querySelectorAll('[data-cfg="hours2"]').forEach(function(e){e.innerHTML=cfg.hours.replace(/&/g,'&amp;').replace(/\n/g,'<br>');});}
+    if(cfg.address){document.querySelectorAll('[data-cfg="addr"]').forEach(function(e){e.textContent=cfg.address;});}
+  }catch(e){}
   var b=document.querySelector('.burger'),l=document.querySelector('.links');
   if(b&&l)b.addEventListener('click',function(){l.classList.toggle('open');});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});

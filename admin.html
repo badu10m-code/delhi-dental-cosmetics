@@ -5,20 +5,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Staff Login</title>
 <meta name="robots" content="noindex, nofollow">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://extendsclass.com; form-action 'self'; base-uri 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://extendsclass.com; form-action 'self'; base-uri 'none'; object-src 'none'">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 <div class="adminwrap">
 <div id="gate" class="lockbox"><h2>Staff Login</h2><p>Enter the clinic passcode.</p>
 <form id="login"><input type="password" id="code" maxlength="40" autocomplete="off" required><button class="btn" type="submit">Sign in</button><p id="st" class="fmsg"></p></form></div>
 <div id="panel" style="display:none">
-<h1 style="font-size:1.6rem">Appointment Requests</h1>
-<div style="margin:16px 0"><button class="abtn" id="refresh">Refresh</button><button class="abtn gold" id="csv">Download CSV</button><button class="abtn red" id="out" style="float:right">Sign out</button></div>
-<table><thead><tr><th>Date</th><th>Time</th><th>Name</th><th>Phone</th><th>Request</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table>
-<p class="fine">Data syncs from the clinic cloud store. Passcode can be changed by the site owner (see README).</p>
+<h1 style="font-size:1.6rem">Clinic Dashboard</h1>
+<div class="atabs"><button class="atab on" data-tab="appts">Appointments</button><button class="atab" data-tab="banners">Banners</button><button class="atab" data-tab="posts">Blog Posts</button><button class="atab" data-tab="settings">Clinic Settings</button></div>
+
+<div class="asec on" id="t-appts">
+<div style="margin:10px 0"><button class="abtn" id="refresh">Refresh</button><button class="abtn gold" id="csv">Download CSV</button><button class="abtn red" id="out" style="float:right">Sign out</button></div>
+<table><thead><tr><th>Date</th><th>Time</th><th>Name</th><th>Phone</th><th>Request</th><th>Status</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table>
+</div>
+
+<div class="asec" id="t-banners">
+<h2 style="font-size:1.15rem">Offer banner</h2>
+<p class="fine">The banner shows on every page while it is active. Only one banner runs at a time; older ones stay saved (latest 6 kept).</p>
+<div class="aform">
+<label>Badge (small text)<input id="bn-badge" maxlength="40" placeholder="Special offer"></label>
+<label>Heading<input id="bn-head" maxlength="80" placeholder="Flat 20% off on check-ups"></label>
+<label>Detail line<input id="bn-text" maxlength="160" placeholder="This week only at our GTB Nagar clinic"></label>
+<label>Button text<input id="bn-cta" maxlength="40" value="Book an appointment"></label>
+<button class="abtn gold" id="bn-save" type="button">Save &amp; activate banner</button>
+</div>
+<div class="blist" id="bn-list"></div>
+</div>
+
+<div class="asec" id="t-posts">
+<h2 style="font-size:1.15rem">Add a clinic note</h2>
+<p class="fine">Posts appear on the Blog page under the published guides. Write plain paragraphs, a blank line between them.</p>
+<div class="aform">
+<label>Title<input id="p-title" maxlength="90" placeholder="Clinic closed on 20 October for Diwali"></label>
+<label>Date<input id="p-date" type="date"></label>
+<label>Body<textarea id="p-body" rows="6" maxlength="4000"></textarea></label>
+<button class="abtn gold" id="p-save" type="button">Publish post</button>
+</div>
+<div class="blist" id="p-list"></div>
+</div>
+
+<div class="asec" id="t-settings">
+<h2 style="font-size:1.15rem">Clinic settings</h2>
+<p class="fine">Saved here and applied across the website on the next page load. Leave a field empty to keep the current value.</p>
+<div class="aform">
+<label>Phone<input id="s-phone" maxlength="18" placeholder="+91 95605 53331"></label>
+<label>WhatsApp number (digits only)<input id="s-wal" maxlength="12" placeholder="919560553331"></label>
+<label>Hours line<input id="s-hours" maxlength="140" placeholder="Mon to Sat: 9:30 AM to 1:30 PM &amp; 5:00 PM to 8:00 PM"></label>
+<label>Address<input id="s-addr" maxlength="200" placeholder="2413 Basement, Hudson Lane, Kingsway Camp, GTB Nagar, Delhi 110009"></label>
+<button class="abtn gold" id="s-save" type="button">Save settings</button>
+<p id="s-msg" class="fmsg"></p>
+</div>
+</div>
+
 </div></div>
-<script src="js/store.js?v=1"></script><script src="js/auth.js?v=1"></script><script src="js/admin.js?v=1"></script>
+<script src="js/store.js?v=2"></script><script src="js/auth.js?v=2"></script><script src="js/admin.js?v=2"></script>
 </body></html>

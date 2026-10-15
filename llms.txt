@@ -1,0 +1,16 @@
+# Delhi Dental Cosmetics
+
+> Dental clinic in GTB Nagar, North Delhi, led by Dr. Animesh Agarwal (17+ years) and Dr. Neha Singhal. Cosmetic and complete health dentistry: dental implants, braces and clear aligners, smile makeovers and veneers, single-sitting root canals, zirconia crowns and bridges, teeth whitening, gum treatment, and family dentistry. Rated 4.9 across 881 Google reviews. Address: 2413 Basement, Hudson Lane, Kingsway Camp, GTB Nagar, Delhi 110009, near GTB Nagar Metro Station Gate 4. Phone +91 95605 53331. Open Monday to Saturday 9:30 AM to 1:30 PM and 5:00 PM to 8:00 PM; Sunday closed. Appointments required; wheelchair accessible; Paytm accepted.
+
+## Pages
+- [Treatments](https://delhidentalcosmetics.com/services.html): full list of dental treatments offered
+- [Our team](https://delhidentalcosmetics.com/doctors.html): the dentists at the clinic
+- [Clinic gallery](https://delhidentalcosmetics.com/gallery.html): real photos of the clinic interior
+- [Appointments](https://delhidentalcosmetics.com/contact.html): how to book, timings and address
+- [Patient guides](https://delhidentalcosmetics.com/blog.html): honest articles on common treatments
+
+## Facts patients ask about
+- Root canal treatment: usually single-sitting where the case allows; Delhi price context in the patient guide
+- Dental implants: planned on X-ray first; full cost quoted before work begins
+- Braces and aligners: both offered; choice depends on case complexity and wear discipline
+- Whitening: in-clinic peroxide whitening; realistic shade targets discussed first
