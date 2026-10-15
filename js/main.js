@@ -1,13 +1,20 @@
-// main.js: nav, reveal, counters, typewriter, year
+// main.js v2: settings from cloud, nav state, reveal, counters, typewriter, year
 document.addEventListener('DOMContentLoaded',function(){
-  try{var cfg=(binLoad()||{}).settings||{};
+  var here=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.links a').forEach(function(a){
+    if(a.classList.contains('cta'))return;
+    var h=(a.getAttribute('href')||'').split('#')[0];
+    a.classList.toggle('active',h===here);
+  });
+  binGet().then(function(raw){
+    var cfg=(raw&&raw.settings)||{};
     if(cfg.phone){document.querySelectorAll('[data-cfg="phone"]').forEach(function(e){e.textContent=cfg.phone;});
       document.querySelectorAll('[data-cfg="tel"]').forEach(function(e){e.href='tel:'+cfg.phone.replace(/[^0-9+]/g,'');});}
     if(cfg.whatsapp){var w=cfg.whatsapp.replace(/[^0-9]/g,'');document.querySelectorAll('[data-cfg="wal"]').forEach(function(e){e.href='https://wa.me/'+w;});}
     if(cfg.hours){document.querySelectorAll('[data-cfg="hours"]').forEach(function(e){e.textContent=cfg.hours;});
-      document.querySelectorAll('[data-cfg="hours2"]').forEach(function(e){e.innerHTML=cfg.hours.replace(/&/g,'&amp;').replace(/\n/g,'<br>');});}
+      document.querySelectorAll('[data-cfg="hours2"]').forEach(function(e){e.innerHTML=cfg.hours.replace(/\u0026/g,'\u0026amp;').replace(/\n/g,'<br>');});}
     if(cfg.address){document.querySelectorAll('[data-cfg="addr"]').forEach(function(e){e.textContent=cfg.address;});}
-  }catch(e){}
+  }).catch(function(){});
   var b=document.querySelector('.burger'),l=document.querySelector('.links');
   if(b&&l)b.addEventListener('click',function(){l.classList.toggle('open');});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});

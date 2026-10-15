@@ -194,3 +194,6 @@ th{color:var(--navy);font-size:.82rem;text-transform:uppercase;letter-spacing:.0
 .guides .fcard h3{font-size:clamp(1.3rem,2.4vw,1.7rem);margin:10px 0}
 .gmore{margin-top:22px}
 .gmore a{color:var(--navy);font-weight:600}
+
+/* v5 fixes */
+[id]{scroll-margin-top:84px}

@@ -20,4 +20,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://delhidentalcosmetics.com/sitemap.xml
+Sitemap: https://badu10m-code.github.io/delhi-dental-cosmetics/sitemap.xml

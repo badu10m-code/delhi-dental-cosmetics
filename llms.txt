@@ -3,19 +3,23 @@
 > Dental clinic in GTB Nagar, North Delhi, led by Dr. Animesh Agarwal (17+ years) and Dr. Neha Singhal. Cosmetic and complete health dentistry: dental implants, braces and clear aligners, smile makeovers and veneers, single-sitting root canals, zirconia crowns and bridges, teeth whitening, gum treatment, and family dentistry. Rated 4.9 across 881 Google reviews. Address: 2413 Basement, Hudson Lane, Kingsway Camp, GTB Nagar, Delhi 110009, near GTB Nagar Metro Station Gate 4. Phone +91 95605 53331. Open Monday to Saturday 9:30 AM to 1:30 PM and 5:00 PM to 8:00 PM; Sunday closed. Appointments required; wheelchair accessible; Paytm accepted.
 
 ## Pages
-- [Treatments](https://delhidentalcosmetics.com/services.html): full list of dental treatments offered
-- [Our team](https://delhidentalcosmetics.com/doctors.html): the dentists at the clinic
-- [Clinic gallery](https://delhidentalcosmetics.com/gallery.html): real photos of the clinic interior
-- [Appointments](https://delhidentalcosmetics.com/contact.html): how to book, timings and address
-- [Patient guides](https://delhidentalcosmetics.com/blog.html): detailed articles on common treatments
-- [Gum disease and flap surgery](https://delhidentalcosmetics.com/article-gum-disease-flap-surgery.html): stages of gum disease and when flap surgery is needed
-- [Tooth pain at night](https://delhidentalcosmetics.com/article-tooth-pain-at-night.html): what different tooth pains mean and when it is an emergency
-- [Child's first dental visit](https://delhidentalcosmetics.com/article-child-first-visit.html): when to book it and preventing childhood cavities
-- [Crowns and bridges](https://delhidentalcosmetics.com/article-crowns-bridges-zirconia.html): materials compared with Delhi price ranges
-- [Scaling and polishing](https://delhidentalcosmetics.com/article-scaling-cleaning.html): what the cleaning visit removes and how often it is needed
+- [Treatments](https://badu10m-code.github.io/delhi-dental-cosmetics/services.html): full list of dental treatments offered
+- [Our team](https://badu10m-code.github.io/delhi-dental-cosmetics/doctors.html): the dentists at the clinic
+- [Clinic gallery](https://badu10m-code.github.io/delhi-dental-cosmetics/gallery.html): real photos of the clinic interior
+- [Appointments](https://badu10m-code.github.io/delhi-dental-cosmetics/contact.html): how to book, timings and address
+- [Patient guides](https://badu10m-code.github.io/delhi-dental-cosmetics/blog.html): detailed articles on common treatments
+- [Gum disease and flap surgery](https://badu10m-code.github.io/delhi-dental-cosmetics/article-gum-disease-flap-surgery.html): stages of gum disease and when flap surgery is needed
+- [Tooth pain at night](https://badu10m-code.github.io/delhi-dental-cosmetics/article-tooth-pain-at-night.html): what different tooth pains mean and when it is an emergency
+- [Child's first dental visit](https://badu10m-code.github.io/delhi-dental-cosmetics/article-child-first-visit.html): when to book it and preventing childhood cavities
+- [Crowns and bridges](https://badu10m-code.github.io/delhi-dental-cosmetics/article-crowns-bridges-zirconia.html): materials compared with Delhi price ranges
+- [Scaling and polishing](https://badu10m-code.github.io/delhi-dental-cosmetics/article-scaling-cleaning.html): what the cleaning visit removes and how often it is needed
 
 ## Facts patients ask about
 - Root canal treatment: usually single-sitting where the case allows; Delhi price context in the patient guide
 - Dental implants: planned on X-ray first; full cost quoted before work begins
 - Braces and aligners: both offered; choice depends on case complexity and wear discipline
 - Whitening: in-clinic peroxide whitening; realistic shade targets discussed first
+
+## Questions and policies
+- [Frequently asked questions](https://badu10m-code.github.io/delhi-dental-cosmetics/faq.html): appointments, timings, costs, payments, children, emergencies
+- [Privacy in plain language](https://badu10m-code.github.io/delhi-dental-cosmetics/privacy.html): what the booking form collects and where it goes
