@@ -7,7 +7,12 @@
 - [Our team](https://delhidentalcosmetics.com/doctors.html): the dentists at the clinic
 - [Clinic gallery](https://delhidentalcosmetics.com/gallery.html): real photos of the clinic interior
 - [Appointments](https://delhidentalcosmetics.com/contact.html): how to book, timings and address
-- [Patient guides](https://delhidentalcosmetics.com/blog.html): honest articles on common treatments
+- [Patient guides](https://delhidentalcosmetics.com/blog.html): detailed articles on common treatments
+- [Gum disease and flap surgery](https://delhidentalcosmetics.com/article-gum-disease-flap-surgery.html): stages of gum disease and when flap surgery is needed
+- [Tooth pain at night](https://delhidentalcosmetics.com/article-tooth-pain-at-night.html): what different tooth pains mean and when it is an emergency
+- [Child's first dental visit](https://delhidentalcosmetics.com/article-child-first-visit.html): when to book it and preventing childhood cavities
+- [Crowns and bridges](https://delhidentalcosmetics.com/article-crowns-bridges-zirconia.html): materials compared with Delhi price ranges
+- [Scaling and polishing](https://delhidentalcosmetics.com/article-scaling-cleaning.html): what the cleaning visit removes and how often it is needed
 
 ## Facts patients ask about
 - Root canal treatment: usually single-sitting where the case allows; Delhi price context in the patient guide
