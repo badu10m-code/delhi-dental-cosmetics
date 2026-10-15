@@ -67,7 +67,8 @@ section{padding:56px 4vw;max-width:1200px;margin:auto}
 .awrap h2{margin-bottom:20px}
 .awrap p{margin-bottom:16px;color:#43536B}
 .pagehead{background:var(--cream);padding:64px 4vw;text-align:center;max-width:none}
-.pagehead h1{font-size:clamp(2rem,4vw,2.8rem)}
+.pagehead h1{font-size:clamp(2rem,4vw,2.8rem);color:var(--navy)}
+.pagehead .kicker{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;font-weight:600}
 .pagehead p{max-width:640px;margin:14px auto 0;color:#5A6B7C}
 .svc{display:grid;grid-template-columns:200px 1fr auto;gap:28px;align-items:center;padding:28px 0;border-bottom:1px solid var(--line)}
 .svc img{width:200px;height:140px;object-fit:cover;border-radius:10px}
