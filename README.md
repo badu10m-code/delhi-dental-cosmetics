@@ -1,45 +1,37 @@
-# Delhi Dental Cosmetics - Website
+# Delhi Dental Cosmetics - React Application
 
-Static site, hosted on GitHub Pages. Canonical domain when live: https://delhidentalcosmetics.com/
+A modern React (Vite) + TypeScript application rewritten from the original static website for **Delhi Dental Cosmetics** (GTB Nagar, Delhi), led by Dr. Animesh Agarwal and Dr. Neha Singhal.
 
-## Admin panel
-- URL: /admin.html (noindex, excluded from sitemap)
-- Default passcode: ddc-boss-6170  **CHANGE IT before the client uses the site** (see below)
-- Data: appointments sync to a private cloud store; admin can confirm via WhatsApp draft, delete entries, export CSV.
+## Features & Architecture
 
-## Change the admin passcode
-1. Pick a new passcode.
-2. Compute its SHA-256 hash and replace the value of AUTH_HASH in js/auth.js (any online SHA-256 tool, then commit).
+- **React SPA**: Built with Vite and TypeScript, listening on `0.0.0.0:3000`.
+- **Preserved Design & Aesthetics**: Original typography (`Playfair Display` & `Jost`), styling (`style.css`), colors, layouts, before-and-after smile results, and team photos.
+- **Client Routing & Pages**:
+  - **Home**: Hero with live typewriter animation, Google 4.9 rating badge with 881 reviews, animated statistics counters, before-and-after smile results, treatment highlights, patient testimonials, clinic photos, and featured guides.
+  - **Treatments**: All 10 dental treatments with comprehensive explanations, cost transparency lines, and direct links to in-depth clinical guides.
+  - **Our Team**: Detailed profiles and credentials for Dr. Animesh Agarwal (BDS, MDS, 17+ years) and Dr. Neha Singhal (BDS, Orthodontics).
+  - **Gallery**: High-resolution operatory, lounge, reception, and patient smile makeover results.
+  - **Blog & Clinical Guides**: Category filter chips, 9 clinical guides written by the clinic desk, plus dynamic clinic announcements.
+  - **Article Reader**: Clean reading experience with tables, clinical stages, bullet points, author card, and related guides.
+  - **Contact & Appointment Request**: Interactive date picker with Sunday guard, quick slot selection (9:30 AM, 11:00 AM, 5:00 PM, 6:30 PM), anti-spam honeypot, duplicate appointment prevention, and instant confirmation reference.
+  - **FAQs**: Searchable interactive accordion covering appointments, accessibility, payments, and emergency care.
+  - **Privacy**: Transparent plain-language data privacy details.
+  - **Staff Admin Dashboard** (`#admin`): Passcode gate (`ddc-boss-6170`), rate-limited brute force protection (5 attempts -> 10m lock), session timeout (20m), appointment requests management with status changes, WhatsApp confirmation drafts, CSV export, banner manager with live preview, dynamic blog post publisher, clinic settings updater, and SHA-256 passcode changer.
 
-## Security measures in place
-- Strict Content-Security-Policy on every page (no inline scripts, no object/embed, controlled frame + connect origins)
-- All user input HTML-escaped before render (XSS)
-- Input validation + maxlength on every field, honeypot field, 30-second submit throttle
-- Admin: SHA-256 passcode, 5-attempt lockout for 10 minutes, 20-minute session expiry, noindex/nofollow
-- Admin excluded from sitemap and robots
-- When moved to the client's real domain, add these server headers: X-Frame-Options: SAMEORIGIN, X-Content-Type-Options: nosniff, Strict-Transport-Security, Referrer-Policy
+## Cloud Storage & Offline Resilience
 
-## Google Search Console
-1. Add property for delhidentalcosmetics.com (domain property, DNS TXT record is easiest)
-2. Or paste the meta token into the google-site-verification meta tag in every page head (placeholder already there)
-3. Submit sitemap.xml from GSC
+- Synced with the clinic cloud JSON store (`https://extendsclass.com/api/json-storage/bin/ecbafad`).
+- Safe optimistic updates with automatic retry and local storage fallback (`ddc_backup`).
 
-## Operations notes (Oct 15, 2026 build v5)
+## Running the App
 
-### Google Search Console (steps for the owner)
-1. Open https://search.google.com/search-console and add property "URL prefix": https://badu10m-code.github.io/delhi-dental-cosmetics/
-2. Choose verification method "HTML tag". Google shows a meta tag like <meta name="google-site-verification" content="XXXX">.
-3. Send that content value to the developer (or Fo). It replaces PASTE-GSC-TOKEN-HERE in every page's <head>, one commit and the site is verified.
-4. Then submit the sitemap: https://badu10m-code.github.io/delhi-dental-cosmetics/sitemap.xml (17 URLs) under Sitemaps.
-5. When the real domain delhidentalcosmetics.com goes live: verify that property too, then replace badu10m-code.github.io/delhi-dental-cosmetics with delhidentalcosmetics.com in canonical/OG tags, robots.txt, sitemap.xml and llms.txt (find-replace across the repo). That is a deliberate switch: canonicals must point at whichever address is actually serving the site.
+```bash
+# Install dependencies
+npm install
 
-### Admin dashboard (admin.html, passcode-protected)
-- Tabs: Dashboard (stats + latest requests), Appointments (search, status filter, newest/oldest, status workflow new > confirmed > done/cancelled, WhatsApp confirm button, delete, CSV export), Banners (form + live preview + activate/deactivate), Blog posts, Clinic settings (phone/WhatsApp/hours/address apply site-wide), Security (change passcode; new hash stored in the cloud store, old hash stays as fallback).
-- Session ends after 20 minutes idle; 5 wrong attempts lock the device for 10 minutes.
-- Default passcode: ddc-boss-6170. Change it from the Security tab after handover.
+# Start development server
+npm run dev
 
-### Booking data safety
-- Every save reads the latest store state first and merges, then writes. If the write fails it retries twice. A local backup copy of the data also stays on each admin device (localStorage "ddc_backup") so nothing is lost if the cloud store is briefly unreachable.
-
-### Banner
-- One banner can be active at a time. A default welcome banner is seeded in the store; change or replace it from the admin Banners tab.
+# Build for production
+npm run build
+```

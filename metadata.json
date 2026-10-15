@@ -1,0 +1,8 @@
+{
+  "name": "Delhi Dental Cosmetics",
+  "description": "Cosmetic and complete health dentistry in GTB Nagar, Delhi. Implants, braces, smile makeovers, and root canals with Dr. Animesh Agarwal and Dr. Neha Singhal.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
